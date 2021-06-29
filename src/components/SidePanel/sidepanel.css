@@ -1,0 +1,8 @@
+.nav-item a {
+    color: #cbd3da!important;
+}
+
+.nav-item a:hover {
+    background-color: #fff;
+    color: black !important;
+}
