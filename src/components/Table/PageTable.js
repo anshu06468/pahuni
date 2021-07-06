@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 
 function PageTable() {
   const [heading, setHeading] = useState([]);
-  const [data, setData] = useState(Array < [] > []);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     let isSubscribed = true;
@@ -75,30 +75,30 @@ function PageTable() {
       rows: arr,
     };
     return (
-      <div className="container-fluid">
 
-        <div className=" row">
-          <div className="page-table-body col-lg-10 col-md-10 col-10 m-auto py-0">
-            <div className='col-lg-12 col-md-12 col-12 text-right file-export'>
-              <Link to='/filedownload' className=' file-export-text'>
-                Export Sheet <i class="fas fa-file-export"></i>
-              </Link>
-            </div>
 
-            <MDBDataTableV5
-              striped
-              hover
-              entriesOptions={[10, 20, 25]}
-              entries={10}
-              data={datatable}
-              searchBottom={false}
-              className="your-custom-styles"
-              pagingTop
-              searchTop
-            />
+      <div className=" row">
+        <div className="page-table-body col-lg-10 col-md-10 col-10 m-auto py-0">
+          <div className='col-lg-12 col-md-12 col-12 text-right file-export'>
+            <Link to='/filedownload' className=' file-export-text'>
+              Export Sheet <i class="fas fa-file-export"></i>
+            </Link>
           </div>
+
+          <MDBDataTableV5
+            striped
+            hover
+            entriesOptions={[10, 20, 25]}
+            entries={10}
+            data={datatable}
+            searchBottom={false}
+            className="your-custom-styles"
+            pagingTop
+            searchTop
+          />
         </div>
       </div>
+
     );
   }
   else {

@@ -10,7 +10,7 @@ export const ExportToExcel = () => {
 
   return (
     <div>
-      <iframe src={testinv} />
+      <iframe src={testinv} title="excel" />
       <h2 style={{ height: '70vh' }}>Sheet has been downloaded. Please check</h2>
     </div>
     // <button onClick={(e) => exportToCSV(apiData, fileName)}>Export <i class="fas fa-file-export"></i></button>

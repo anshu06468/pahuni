@@ -1,7 +1,7 @@
 import './sidepanel.css'
 
 import {
-  BrowserRouter as Router,
+  // BrowserRouter as Router,
   // Switch,
   // Route,
   Link

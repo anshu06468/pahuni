@@ -1,13 +1,13 @@
-import LineChart from "../Chart/LineChart";
+// import LineChart from "../Chart/LineChart";
 import Chart from "../Chart/Chart";
-import PageTable from '../Table/PageTable'
+// import PageTable from '../Table/PageTable'
 
 
-const Home =()=>{
-    return(
+const Home = () => {
+    return (
         <>
-        <Chart />
-        {/* <PageTable/> */}
+            <Chart />
+            {/* <PageTable/> */}
         </>
     )
 }
