@@ -7,6 +7,8 @@ import {
   Link
 } from 'react-router-dom';
 const SidePanel = () => {
+  const file = require("./../../assets/book.pdf");
+  console.log(file);
   return (
     <div className="sidebar p-0 ">
       <ul className="sidebar-item nav flex-column">
@@ -18,13 +20,13 @@ const SidePanel = () => {
           </Link>
         </li>
         <li className="nav-item  panel-item sidebar-text">
-          <Link to='/troubleshootingsteps' className='panel-item sidebar-text'>
+          <a href={file.default} className='panel-item sidebar-text' target="_blank">
             <span className="mr-3"><i class="fa fa-cogs" aria-hidden="true"></i></span>
             <span>
 
               Troubleshooting Steps
             </span>
-          </Link>
+          </a>
         </li>
         <li className="nav-item panel-item">
 
