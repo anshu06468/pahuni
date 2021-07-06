@@ -1,12 +1,15 @@
-import Chart from "./../Chart/Chart";
-import PageTable from "../Table/PageTable";
-function Home() {
-    return (
+import LineChart from "../Chart/LineChart";
+import Chart from "../Chart/Chart";
+import PageTable from '../Table/PageTable'
+
+
+const Home =()=>{
+    return(
         <>
-            <Chart />
-            <PageTable />
+        <Chart />
+        {/* <PageTable/> */}
         </>
     )
 }
 
-export default Home;
+export default Home

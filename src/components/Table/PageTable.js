@@ -1,10 +1,11 @@
 import "./PageTable.css";
 import { dataTable } from "../../Services/DataTable";
-
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
+import { Link } from "react-router-dom";
 import React from "react";
 import { MDBDataTableV5 } from "mdbreact";
 import { useState, useEffect } from "react";
-import LoadingSpinner from "./../LoadingSpinner/LoadingSpinner"
+
 
 function PageTable() {
   const [heading, setHeading] = useState([]);
@@ -75,8 +76,15 @@ function PageTable() {
     };
     return (
       <div className="container-fluid">
+
         <div className=" row">
-          <div className="page-table-body col-lg-10 col-md-10 col-11 m-auto py-0">
+          <div className="page-table-body col-lg-10 col-md-10 col-10 m-auto py-0">
+            <div className='col-lg-12 col-md-12 col-12 text-right file-export'>
+              <Link to='/filedownload' className=' file-export-text'>
+                Export Sheet <i class="fas fa-file-export"></i>
+              </Link>
+            </div>
+
             <MDBDataTableV5
               striped
               hover
@@ -92,10 +100,17 @@ function PageTable() {
         </div>
       </div>
     );
-  } else {
-    return <div className="d-flex justify-content-center">
-      <LoadingSpinner />;
-    </div>
+  }
+  else {
+    return (
+      <div className="container-fluid">
+        <div className=" row">
+          <div className="page-table-body col-lg-10 col-md-10 col-10 m-auto py-0 d-flex justify-content-center">
+            <LoadingSpinner />
+          </div>
+        </div>
+      </div>
+    )
   }
 }
 

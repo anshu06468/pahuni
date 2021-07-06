@@ -35,12 +35,24 @@ export async function getData() {
     dataS.push(statCount);
     return dataS
 }
-
+var totalcount=0;
 export async function getDataDough(){
     const resp = await fetch(minv);
     const rev = await resp.text();
     const col = rev.split('\n');
-    const count = col.length;
-    return [count,ncount]
-    
+    totalcount = col.length;
+    var compliant = totalcount-ncount;
+    return [compliant,ncount]    
+}
+
+export async function getCountData(){
+    await getDataDough();
+    await getData();
+    var perc = (((totalcount-ncount)/totalcount)*100).toFixed(2);
+    const ab = {
+        "total":totalcount,
+        "noncompliant":ncount,
+        "percentage":perc
+    };
+    return ab
 }

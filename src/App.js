@@ -1,29 +1,35 @@
 import "./App.css";
-import Home from "./components/Home/Home";
-import AboutUs from "./components/AboutUs/AboutUs"
-import Troubleshoot from "./components/Troubleshoot/Troubleshoot"
+
 import Header from "./components/Header/Header";
 import SidePanel from "./components/SidePanel/SidePanel";
-import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
+import Aboutus from "./components/AboutUs/AboutUs";
+import Home from "./components/Home/Home";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Table from "./components/Table/Table";
+import Footer from "./components/Footer/Footer";
+import { TroubleshootingSteps } from "./components/TroubleshootingSteps/TroubleshootingSteps";
+import { ExportToExcel } from './components/Table/ExportToExcel/ExportToExcel';
 
 function App() {
   return (
     <>
       <Router>
         <Header />
-        <div className="row ">
-          <div className=" col-lg-2 d-none d-xl-block d-lg-block pr-0 mt-5">
-            <div class="side-panel largeScreen pt-3 d-md-none d-lg-block">
-              <SidePanel />
-            </div>
+        <div className="row mt-5">
+          <div className="side-panel col-lg-2 d-none d-xl-block d-lg-block pr-0 ">
+            <SidePanel />
           </div>
-          <div className="col-lg-10  page-body">
+          <div className="page-body col-lg-10 px-0 ">
             <Switch>
-              <Route exact path='/' component={Home}></Route>
-              <Route exact path='/troubleshoot' component={Troubleshoot}></Route>
-              <Route exact path='/about' component={AboutUs}></Route>
+              <Route exact path="/" component={Home}></Route>
+              <Route exact path="/aboutus" component={Aboutus}></Route>
+              <Route exact path="/table" component={Table}></Route>
+              <Route exact path="/troubleshootingsteps" component={TroubleshootingSteps}></Route>
+              <Route exact path="/filedownload" component={ExportToExcel}></Route>
             </Switch>
-
+            <div className="page-footer pt-3 sticky-bottom">
+              <Footer />
+            </div>
           </div>
         </div>
       </Router>
