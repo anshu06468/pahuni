@@ -1,6 +1,5 @@
 import './sidepanel.css'
 
-// import Aboutus from '../AboutUs/AboutUs';
 import {
   BrowserRouter as Router,
   // Switch,
