@@ -21,7 +21,7 @@ function Header() {
 
   return (
     <nav className="header-navbar navbar fixed-top navbar-dark bg-dark text-light">
-      <a className="title-navbar navbar-brand" href="#">
+      <a className="title-navbar navbar-brandv d-flex align-items-center" href="#">
         <img
           src={logo}
           width="30"
